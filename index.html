@@ -34,31 +34,49 @@
       text-align: center;
       padding: 10px;
     }
-   /* Tenta remover o cabeçalho com classes específicas (INSPECIONE para encontrar as corretas) */
-  .instagram-media iframe .user-info {
+   /* Força a ocultação dos elementos com a classe 'Header' */
+  .instagram-media iframe .Header {
     display: none !important;
   }
 
-  /* Tenta remover a parte inferior com classes específicas (INSPECIONE para encontrar as corretas) */
-  .instagram-media iframe .engagement-bar {
+  /* Força a ocultação do 'HoverCard' */
+  .instagram-media iframe .HoverCard {
     display: none !important;
   }
 
-  /* Tenta ajustar a altura do iframe para mostrar apenas a imagem */
-  .instagram-media iframe {
-    max-height: 400px !important; /* Ajuste conforme a proporção da imagem */
-    width: 100% !important; /* Garante que a largura ocupe o contêiner */
-  }
-
-  /* Oculta a legenda abaixo da imagem (se houver uma classe específica) */
-  .instagram-media iframe .caption-container {
+  /* Força a ocultação da seção de feedback (curtir, comentar, compartilhar, salvar) */
+  .instagram-media iframe .Feedback {
     display: none !important;
   }
 
-  /* Tenta ocultar a barra de "Ver mais no Instagram" */
+  /* Força a ocultação da contagem de curtidas */
+  .instagram-media iframe .SocialProof {
+    display: none !important;
+  }
+
+  /* Força a ocultação da legenda */
+  .instagram-media iframe .Caption {
+    display: none !important;
+  }
+
+  /* Força a ocultação do footer (adicionar comentário, logo do Instagram) */
+  .instagram-media iframe .Footer {
+    display: none !important;
+  }
+
+  /* Oculta o botão "Ver mais no Instagram" abaixo da imagem */
   .instagram-media > a {
     display: none !important;
   }
+
+  /* Ajusta a altura do iframe para tentar mostrar apenas a imagem */
+  .instagram-media iframe .EmbedFrame {
+    padding-bottom: 0 !important; /* Remove o padding inferior que define a proporção */
+  }
+
+  .instagram-media iframe {
+    max-height: none !important; /* Remove qualquer altura máxima */
+    height: auto !important; /* Ajusta a altura automaticamente ao conteúdo visível */
   }
   </style>
 </head>
