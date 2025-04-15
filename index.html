@@ -34,6 +34,20 @@
       text-align: center;
       padding: 10px;
     }
+    /* Tenta remover o cabeçalho com o nome do usuário e botão "Ver Perfil" */
+  .instagram-media > div > div:first-child {
+      display: none !important;
+  }
+  
+  /* Tenta remover a parte inferior com as curtidas, nome, legenda e comentários */
+  .instagram-media > div > div:nth-child(3) {
+      display: none !important;
+  }
+  
+  /* Ajuste a altura do iframe para tentar mostrar apenas a imagem */
+  .instagram-media > iframe {
+      max-height: 400px !important; /* Ajuste este valor conforme necessário */
+  }
   </style>
 </head>
 <body>
@@ -51,7 +65,7 @@
   </main>
 
   <footer>
-    &copy; 2025 - Meu Site Local
+    &copy; 2025 - Tiburcio Site Local
   </footer>
 
   <script async src="//www.instagram.com/embed.js"></script>
