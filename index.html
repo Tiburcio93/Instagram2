@@ -5,104 +5,110 @@
     <title>Postagens do Instagram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        header {
-            background-color: #405de6;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #405de6;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Para centralizar verticalmente as setas */
-            position: relative; /* Para posicionar as setas */
-        }
+    main {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Para centralizar verticalmente as setas */
+        position: relative; /* Para posicionar as setas */
+    }
 
-        .carousel-container {
-            display: flex;
-            /*overflow: hidden; /* Esconde os banners que não estão visíveis */
-            width: 100%; /* Ocupa a largura total do main */
-            max-width: calc(540px * 3); /* Largura máxima para três banners lado a lado */
-        }
+    .carousel-container {
+        display: flex;
+        overflow: hidden; /* Esconde os banners que não estão visíveis */
+        width: 100%; /* Ocupa a largura total do main */
+        /* max-width: calc(540px * 3); */ /* Removed or commented out */
+    }
 
-        .instagram-media {
-            flex: 0 0 auto; /* Não encolhe nem estica, ocupa sua largura definida */
-            margin: 10px; /* Aumentei um pouco a margem para espaçamento */
-            max-width: 540px;
-            min-width: 326px;
-            width: calc(33.33% - 20px); /* Aproximadamente um terço da largura com margens */
-            box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-        }
+    .instagram-media {
+        flex: 0 0 auto; /* Não encolhe nem estica, ocupa sua largura definida */
+        margin: 10px; /* Aumentei um pouco a margem para espaçamento */
+        max-width: 540px;
+        min-width: 326px;
+        width: calc(33.33% - 20px); /* Aproximadamente um terço da largura com margens */
+        box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 400px; /* Adjust this value */
+    }
 
-        footer {
-            background-color: #ddd;
-            text-align: center;
-            padding: 10px;
-        }
+    footer {
+        background-color: #ddd;
+        text-align: center;
+        padding: 10px;
+    }
 
-        /* Estilos para ocultar elementos do iframe (mantidos) */
-        .instagram-media iframe .Header,
-        .instagram-media iframe .HoverCard,
-        .instagram-media iframe .Feedback,
-        .instagram-media iframe .SocialProof,
-        .instagram-media iframe .Caption,
-        .instagram-media iframe .Footer,
-        .instagram-media > a,
-        .instagram-media iframe .EmbedFrame {
-            display: none !important;
-        }
+    /* Estilos para ocultar elementos do iframe (mantidos) */
+    .instagram-media iframe .Header,
+    .instagram-media iframe .HoverCard,
+    .instagram-media iframe .Feedback,
+    .instagram-media iframe .SocialProof,
+    .instagram-media iframe .Caption,
+    .instagram-media iframe .Footer,
+    .instagram-media > a,
+    .instagram-media iframe .EmbedFrame {
+        display: none !important;
+    }
 
-        .instagram-media iframe {
-            max-height: none !important;
-            height: auto !important;
-        }
+    .instagram-media iframe {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain; /* Or 'cover' if you prefer cropping */
+    }
 
-        /* Estilos para as setas */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2em;
-            color: #333;
-            background: #eee;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-            user-select: none;
-        }
+    /* Estilos para as setas (mantidos) */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        color: #333;
+        background: #eee;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        user-select: none;
+    }
 
-        .arrow:hover {
-            opacity: 1;
-            background: #ddd;
-        }
+    .arrow:hover {
+        opacity: 1;
+        background: #ddd;
+    }
 
-        .left-arrow {
-            left: 10px;
-        }
+    .left-arrow {
+        left: 10px;
+    }
 
-        .right-arrow {
-            right: 10px;
-        }
-    </style>
+    .right-arrow {
+        right: 10px;
+    }
+</style>
 </head>
 <body>
     <header>
