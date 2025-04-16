@@ -163,6 +163,23 @@
             const rightArrow = document.querySelector('.right-arrow');
             let currentIndex = 0;
             const bannerWidth = banners[0].offsetWidth + 20; // Largura de um banner + margens
+             const instagramEmbeds = document.querySelectorAll('.instagram-media iframe');
+
+            instagramEmbeds.forEach(iframe => {
+                iframe.onload = function() {
+                    try {
+                        const header = iframe.contentDocument.querySelector('.Header');
+                        if (header) {
+                            header.style.display = 'none';
+                        } else {
+                            console.log("Elemento .Header não encontrado no iframe.");
+                        }
+                    } catch (error) {
+                        console.error("Erro ao acessar o conteúdo do iframe:", error);
+                        console.warn("Pode haver restrições de cross-origin impedindo o acesso.");
+                    }
+                };
+            });
 
             function updateCarousel() {
                 container.style.transform = `translateX(-${currentIndex * bannerWidth}px)`;
